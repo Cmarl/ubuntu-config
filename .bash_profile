@@ -33,7 +33,7 @@ branch()
 
 status()
 {
-  git status --porcelain 2> /dev/null | awk '/\S/ {print "+";}'
+  git status --porcelain 2> /dev/null | wc | awk '{if($1 > 0)print"+";}'
 }
 
 export PS1="$txtcyn\u$txtred@$txtcyn\h $txtred\w $txtblk\$(status)$txtcyn\$(branch)$txtblk:$txtrst "
