@@ -23,6 +23,18 @@ alias    b='cd ..'
 alias    c='clear'
 alias code='cd ~/apps/code'
 alias data='cd ~/apps/data/mongo'
+alias   gu='node ~/apps/code/gituser/index.js'
+alias   gc='git config -l'
 
-export PS1="$txtcyn\u$txtred@$txtgrn\h $txtred\w$txtblk >$txtrst "
+branch()
+{
+  git branch 2> /dev/null | awk '/*/ {print "#" $2;}'
+}
+
+status()
+{
+  git status --porcelain 2> /dev/null | awk '/\S/ {print "+";}'
+}
+
+export PS1="$txtcyn\u$txtred@$txtcyn\h $txtred\w $txtblk\$(status)$txtcyn\$(branch)$txtblk:$txtrst "
 
