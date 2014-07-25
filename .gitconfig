@@ -1,3 +1,9 @@
 [user]
-	name = Chyld Medford
-	email = chyld.medford@gmail.com
+  name = Chyld Medford
+  email = chyld.medford@gmail.com
+[alias]
+  st = status -s
+  lg = log --oneline
+  br = branch -av
+  rt = remote -v
+
