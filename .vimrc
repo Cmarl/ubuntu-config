@@ -8,6 +8,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'kien/ctrlp.vim'
 Plugin 'digitaltoad/vim-jade'
 Plugin 'groenewege/vim-less'
@@ -40,6 +41,9 @@ set autoindent                                   " start new line at the same in
 set nobackup                                     " do not keep backup files, it's 70's style cluttering
 set noswapfile                                   " do not write annoying intermediate swap files
 set wrap!                                        " turn off word wrapping
+
+" render ejs files like html
+au BufNewFile,BufRead *.ejs set filetype=html
 
 " setting timeout lengths
 set timeoutlen=1000
