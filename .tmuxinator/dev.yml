@@ -30,7 +30,6 @@ windows:
   - grunt: grunt
   - redis: clear; redis-cli
   - mongo: clear; mongo
-  - grunt: grunt
   - system: htop
   - prompt1: clear
   - prompt2: clear
