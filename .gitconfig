@@ -1,9 +1,13 @@
 [user]
-  name = Chyld Medford
-  email = chyld.medford@gmail.com
+	name = Chyld Medford
+	email = chyld.medford@gmail.com
 [alias]
   st = status -s
-  lg = log --oneline
+  lg = log --oneline --decorate --all --graph
   br = branch -av
   rt = remote -v
 
+[core]
+	autocrlf = input
+[pull]
+	rebase = true
