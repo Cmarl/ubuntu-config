@@ -15,6 +15,7 @@ MONGO_PATH=/usr/local/mongo/bin
 
 export PATH=$GIT_PATH:$NODE_PATH:$REDIS_PATH:$MONGO_PATH:$PATH
 export EDITOR=vim
+export SHELL=/bin/bash
 
 alias   ls='ls --color=auto'
 alias    l='ls'
@@ -37,4 +38,5 @@ status()
 }
 
 export PS1="$txtcyn\u$txtred@$txtcyn\h $txtred\w $txtblk\$(status)$txtcyn\$(branch)$txtblk:$txtrst "
+source ~/.keys
 
